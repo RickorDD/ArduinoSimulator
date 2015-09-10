@@ -16,6 +16,51 @@ import javax.swing.JTextField;
 @SuppressWarnings("serial")
 public class SimulatorFrame extends JFrame implements ActionListener {
 
+    JComboBox comboD1;
+    JComboBox comboD2;
+    JComboBox comboD3;
+    JComboBox comboD4;
+    JComboBox comboD5;
+    JComboBox comboD6;
+    JComboBox comboD7;
+    JComboBox comboD8;
+    JComboBox comboD9;
+    JComboBox comboD10;
+    JComboBox comboD11;
+    JComboBox comboD12;
+    JComboBox comboD13;
+    
+    JLabel textD1;
+    JLabel textD2;
+    JLabel textD3;
+    JLabel textD4;
+    JLabel textD5;
+    JLabel textD6;
+    JLabel textD7;
+    JLabel textD8;
+    JLabel textD9;
+    JLabel textD10;
+    JLabel textD11;
+    JLabel textD12;
+    JLabel textD13;
+
+    JLabel textA0;
+    JLabel textA1;
+    JLabel textA2;
+    JLabel textA3;
+    JLabel textA4;
+    JLabel textA5;
+    JLabel textblind;
+
+    JTextField textFieldA0;
+    JTextField textFieldA1;
+    JTextField textFieldA2;
+    JTextField textFieldA3;
+    JTextField textFieldA4;
+    JTextField textFieldA5;
+    
+    JButton button1;
+    
     GridBagLayout layout = new GridBagLayout();
 
     public SimulatorFrame(String name) {
@@ -34,50 +79,6 @@ public class SimulatorFrame extends JFrame implements ActionListener {
 
     public void addComponents(Container pane) {
 	String[] Select = { " ", "0", "1" };
-	JComboBox comboD1;
-	JComboBox comboD2;
-	JComboBox comboD3;
-	JComboBox comboD4;
-	JComboBox comboD5;
-	JComboBox comboD6;
-	JComboBox comboD7;
-	JComboBox comboD8;
-	JComboBox comboD9;
-	JComboBox comboD10;
-	JComboBox comboD11;
-	JComboBox comboD12;
-	JComboBox comboD13;
-
-	JLabel textD1;
-	JLabel textD2;
-	JLabel textD3;
-	JLabel textD4;
-	JLabel textD5;
-	JLabel textD6;
-	JLabel textD7;
-	JLabel textD8;
-	JLabel textD9;
-	JLabel textD10;
-	JLabel textD11;
-	JLabel textD12;
-	JLabel textD13;
-
-	JLabel textA0;
-	JLabel textA1;
-	JLabel textA2;
-	JLabel textA3;
-	JLabel textA4;
-	JLabel textA5;
-	JLabel textblind;
-
-	JTextField textFieldA0;
-	JTextField textFieldA1;
-	JTextField textFieldA2;
-	JTextField textFieldA3;
-	JTextField textFieldA4;
-	JTextField textFieldA5;
-	
-	JButton button1;
 
 	pane.setLayout(new GridBagLayout());
 	GridBagConstraints c = new GridBagConstraints();
@@ -87,79 +88,67 @@ public class SimulatorFrame extends JFrame implements ActionListener {
 	c.gridy = 0;
 	pane.add(comboD1, c);
 	comboD1.addActionListener(this);
-		
+
 	comboD2 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 1;
 	pane.add(comboD2, c);
-	comboD2.addActionListener(this);
-	
+
 	comboD3 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 2;
 	pane.add(comboD3, c);
-	comboD3.addActionListener(this);
-	
+
 	comboD4 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 3;
 	pane.add(comboD4, c);
-	comboD4.addActionListener(this);
-	
+
 	comboD5 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 4;
 	pane.add(comboD5, c);
-	comboD5.addActionListener(this);
-	
+
 	comboD6 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 5;
 	pane.add(comboD6, c);
-	comboD6.addActionListener(this);
-	
+
 	comboD7 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 6;
 	pane.add(comboD7, c);
-	comboD7.addActionListener(this);
-	
+
 	comboD8 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 7;
 	pane.add(comboD8, c);
-	comboD8.addActionListener(this);
-	
+
 	comboD9 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 8;
 	pane.add(comboD9, c);
-	comboD9.addActionListener(this);
-	
+
 	comboD10 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 9;
 	pane.add(comboD10, c);
-	comboD10.addActionListener(this);
-	
+
 	comboD11 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 10;
 	pane.add(comboD11, c);
-	comboD11.addActionListener(this);
-	
+
 	comboD12 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 11;
 	pane.add(comboD12, c);
-	comboD12.addActionListener(this);
-	
+
 	comboD13 = new JComboBox(Select);
 	c.gridx = 0;
 	c.gridy = 12;
 	pane.add(comboD13, c);
-	comboD13.addActionListener(this);
-	
+
 	textD1 = new JLabel("D1");
 	textD1.setFont(textD1.getFont().deriveFont(Font.BOLD));
 	c.gridx = 1;
@@ -242,6 +231,7 @@ public class SimulatorFrame extends JFrame implements ActionListener {
 	c.gridx = 2;
 	c.gridy = 0;
 	pane.add(textFieldA0, c);
+	textFieldA0.addActionListener(this);
 
 	textFieldA1 = new JTextField(3);
 	c.gridx = 2;
@@ -303,25 +293,37 @@ public class SimulatorFrame extends JFrame implements ActionListener {
 	c.gridx = 3;
 	c.gridy = 5;
 	pane.add(textA5, c);
-	
+
 	textblind = new JLabel("          ");
 	c.gridx = 0;
 	c.gridy = 13;
-	c.gridwidth=4;
-	pane.add(textblind,c);
-	
-	button1=new JButton("Speichern");
+	c.gridwidth = 4;
+	pane.add(textblind, c);
+
+	button1 = new JButton("Speichern");
 	c.gridx = 0;
 	c.gridy = 14;
-	c.gridwidth=3;
-	pane.add(button1,c);
+	c.gridwidth = 3;
+	pane.add(button1, c);
+	button1.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-	JComboBox comboD1 = (JComboBox) e.getSource();
-	String SelectionD1 = (String) comboD1.getSelectedItem();
-	System.out.println("Chosen Name: " + SelectionD1);
+	if (e.getSource() == button1) {
+	    System.out.println("Button geklickt!");
+	}
+
+	else if (e.getSource() == comboD1) {
+	    String SelectionD1 = (String) comboD1.getSelectedItem();
+	    System.out.println("D1 " + SelectionD1);
+	}
+
+	else if (e.getSource() == textFieldA0) {
+	    String TextA0 = textFieldA0.getText();
+	    System.out.println("A0 " + TextA0);
+
+	}
     }
 
     public void windowClosing(WindowEvent e) {

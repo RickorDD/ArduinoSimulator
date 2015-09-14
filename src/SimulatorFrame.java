@@ -321,40 +321,40 @@ public class SimulatorFrame extends JFrame implements ActionListener {
 	    String TextA3 = textFieldA3.getText();
 	    String TextA4 = textFieldA4.getText();
 	    String TextA5 = textFieldA5.getText();
-	    if (TextA0 != "") {
-		fw.write("0");
+	    if (!TextA0.isEmpty()) {
+	    	fw.write("0");
 		fw.write(" ");
 		fw.write(TextA0);
 		fw.write(System.lineSeparator());
 	    }
-	    if (TextA1 != "") {
+	    if (!TextA1.isEmpty()) {
 		fw.write("1");
 		fw.write(" ");
 		fw.write(TextA1);
 		fw.write(System.lineSeparator());
 	    }
-	    if (TextA2 != "") {
+	    if (!TextA2.isEmpty()) {
 		fw.write("2");
 		fw.write(" ");
 		fw.write(TextA2);
 		fw.write(System.lineSeparator());
 	    }
-	    if (TextA3 != "") {
+	    if (!TextA3.isEmpty()) {
 		fw.write("3");
 		fw.write(" ");
 		fw.write(TextA3);
 		fw.write(System.lineSeparator());
 	    }
-	    if (TextA4 != "") {
+	    if (!TextA4.isEmpty()) {
 		fw.write("4");
 		fw.write(" ");
-		fw.write(TextA0);
+		fw.write(TextA4);
 		fw.write(System.lineSeparator());
 	    }
-	    if (TextA5 != "") {
+	    if (!TextA5.isEmpty()) {
 		fw.write("5");
 		fw.write(" ");
-		fw.write(TextA0);
+		fw.write(TextA5);
 		fw.write(System.lineSeparator());
 	    }
 	    fw.close();

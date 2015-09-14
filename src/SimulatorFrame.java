@@ -6,6 +6,9 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -29,7 +32,7 @@ public class SimulatorFrame extends JFrame implements ActionListener {
     JComboBox comboD11;
     JComboBox comboD12;
     JComboBox comboD13;
-    
+
     JLabel textD1;
     JLabel textD2;
     JLabel textD3;
@@ -58,9 +61,9 @@ public class SimulatorFrame extends JFrame implements ActionListener {
     JTextField textFieldA3;
     JTextField textFieldA4;
     JTextField textFieldA5;
-    
+
     JButton button1;
-    
+
     GridBagLayout layout = new GridBagLayout();
 
     public SimulatorFrame(String name) {
@@ -308,21 +311,165 @@ public class SimulatorFrame extends JFrame implements ActionListener {
 	button1.addActionListener(this);
     }
 
+    public void addFileAnalog() {
+	try {
+	    FileWriter fw;
+	    fw = new FileWriter(new File("C:\\Daten\\C++\\TRED\\analogvalue.txt"));
+	    String TextA0 = textFieldA0.getText();
+	    String TextA1 = textFieldA1.getText();
+	    String TextA2 = textFieldA2.getText();
+	    String TextA3 = textFieldA3.getText();
+	    String TextA4 = textFieldA4.getText();
+	    String TextA5 = textFieldA5.getText();
+	    if (TextA0 != "") {
+		fw.write("0");
+		fw.write(" ");
+		fw.write(TextA0);
+		fw.write(System.lineSeparator());
+	    }
+	    if (TextA1 != "") {
+		fw.write("1");
+		fw.write(" ");
+		fw.write(TextA1);
+		fw.write(System.lineSeparator());
+	    }
+	    if (TextA2 != "") {
+		fw.write("2");
+		fw.write(" ");
+		fw.write(TextA2);
+		fw.write(System.lineSeparator());
+	    }
+	    if (TextA3 != "") {
+		fw.write("3");
+		fw.write(" ");
+		fw.write(TextA3);
+		fw.write(System.lineSeparator());
+	    }
+	    if (TextA4 != "") {
+		fw.write("4");
+		fw.write(" ");
+		fw.write(TextA0);
+		fw.write(System.lineSeparator());
+	    }
+	    if (TextA5 != "") {
+		fw.write("5");
+		fw.write(" ");
+		fw.write(TextA0);
+		fw.write(System.lineSeparator());
+	    }
+	    fw.close();
+	} catch (IOException ex) {
+	    ex.printStackTrace();
+	}
+    }
+
+    public void addFileDigital() {
+	try {
+	    FileWriter fw;
+	    fw = new FileWriter(new File("C:\\Daten\\C++\\TRED\\digitalvalue.txt"));
+	    String SelectionD1 = (String) comboD1.getSelectedItem();
+	    String SelectionD2 = (String) comboD2.getSelectedItem();
+	    String SelectionD3 = (String) comboD3.getSelectedItem();
+	    String SelectionD4 = (String) comboD4.getSelectedItem();
+	    String SelectionD5 = (String) comboD5.getSelectedItem();
+	    String SelectionD6 = (String) comboD6.getSelectedItem();
+	    String SelectionD7 = (String) comboD7.getSelectedItem();
+	    String SelectionD8 = (String) comboD8.getSelectedItem();
+	    String SelectionD9 = (String) comboD9.getSelectedItem();
+	    String SelectionD10 = (String) comboD10.getSelectedItem();
+	    String SelectionD11 = (String) comboD11.getSelectedItem();
+	    String SelectionD12 = (String) comboD12.getSelectedItem();
+	    String SelectionD13 = (String) comboD13.getSelectedItem();
+	    if (SelectionD1 != " ") {
+		fw.write("1");
+		fw.write(" ");
+		fw.write(SelectionD1);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD2 != " ") {
+		fw.write("2");
+		fw.write(" ");
+		fw.write(SelectionD2);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD3 != " ") {
+		fw.write("3");
+		fw.write(" ");
+		fw.write(SelectionD3);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD4 != " ") {
+		fw.write("4");
+		fw.write(" ");
+		fw.write(SelectionD4);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD5 != " ") {
+		fw.write("5");
+		fw.write(" ");
+		fw.write(SelectionD5);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD6 != " ") {
+		fw.write("6");
+		fw.write(" ");
+		fw.write(SelectionD6);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD7 != " ") {
+		fw.write("7");
+		fw.write(" ");
+		fw.write(SelectionD7);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD8 != " ") {
+		fw.write("8");
+		fw.write(" ");
+		fw.write(SelectionD8);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD9 != " ") {
+		fw.write("9");
+		fw.write(" ");
+		fw.write(SelectionD9);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD10 != " ") {
+		fw.write("10");
+		fw.write(" ");
+		fw.write(SelectionD10);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD11 != " ") {
+		fw.write("11");
+		fw.write(" ");
+		fw.write(SelectionD11);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD12 != " ") {
+		fw.write("12");
+		fw.write(" ");
+		fw.write(SelectionD12);
+		fw.write(System.lineSeparator());
+	    }
+	    if (SelectionD13 != " ") {
+		fw.write("13");
+		fw.write(" ");
+		fw.write(SelectionD13);
+		fw.write(System.lineSeparator());
+	    }
+	    fw.close();
+	} catch (IOException ex) {
+	    ex.printStackTrace();
+	}
+
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
 	if (e.getSource() == button1) {
-	    System.out.println("Button geklickt!");
-	}
-
-	else if (e.getSource() == comboD1) {
-	    String SelectionD1 = (String) comboD1.getSelectedItem();
-	    System.out.println("D1 " + SelectionD1);
-	}
-
-	else if (e.getSource() == textFieldA0) {
-	    String TextA0 = textFieldA0.getText();
-	    System.out.println("A0 " + TextA0);
-
+	    addFileDigital();
+	    addFileAnalog();
 	}
     }
 
